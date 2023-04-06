@@ -1,4 +1,4 @@
-@import './_variables';
+// @import './_variables';
 
 :root {
     --white: rgb(255, 255, 255);
@@ -1001,7 +1001,6 @@ header {
     .container{
         width: 420px;
         margin-top: 40px;
-        // background-color: ;
         h3{
             color: rgb(5, 31, 77);
             font-size: 30px;
@@ -1142,6 +1141,277 @@ header {
                 .button{
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+// === footer ===
+#contact {
+    width: 420px;
+    margin: auto;
+    background-color: rgb(5, 31, 78);
+    .container{
+        width: 420px;
+        padding-left: 20px;
+        .contact__wrapper{
+            .contact__info {
+
+                h4{
+                    color: var(--white);
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 1.4;
+                    padding-top: 40px;
+                    margin-bottom: 20px;
+                }
+                .info{
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 15px;
+
+                    .icon{
+                        width: 23px;
+                        height: 23px;
+
+                    }
+                    p{
+                        color: var(--white);
+                        font-size: 14px;
+                        line-height: 1.4;
+                    }
+                }
+            }
+            .customer__service{
+
+                h4{
+                    color: var(--white);
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 30px;
+                }
+                .cus__services{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    column-gap: 40px;
+                    row-gap: 10px;
+                    margin: 20px 0 35px;
+                    .service{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .icon{
+                            width: 23px;
+                            height: 23px;
+                        }
+                        .term{
+                            width: 19px;
+                            height: 19px;
+                        }
+                        p{
+                            color: var(--white);
+                            font-size: 14px;
+                        }
+                    }
+                    .terms{
+                        margin-right: 85px;
+                    }
+                }
+                .frame{
+                    width: 196px;
+                    height: 41px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    background-color: var(--white);
+
+                    .visa,.card{
+                        width: 35.5px;
+                        height: 23px;
+                    }
+                    .bct{
+                        width: 80px;
+                        height: 31px;
+                    }
+                }
+            }
+        }
+        .contact__line{
+            width: 372px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+        }
+        .contact__footer{
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            margin-bottom: 80px;
+        }
+    }
+}
+@media (min-width: 992px){
+    #contact{
+        width: 100%;
+
+        .container{
+            width: 960px;
+            margin-top: 0 auto;
+            padding-top: 35px;
+
+            .contact__wrapper{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+
+                .contact__info{
+                    flex: 60%;
+                }
+                .customer__service{
+                    flex: 40%;
+                    margin-top: 10px;
+                }
+            }
+            .contact__line{
+                width: 960px;
+            }
+            .contact__footer{
+                text-align: center;
+            }
+        }
+    }
+}
+
+// === #feedback ===
+
+#feedback {
+    width: 420px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.477);
+    border-radius: 8px;
+    .container{
+        width: 420px;
+        padding: 10px;
+        h2{
+            color: rgb(5, 31, 77);
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            span{
+                color: rgb(247, 90, 0);
+            }
+        }
+        p{
+            font-size: 15px;
+            text-align: center;
+            line-height: 1.4;
+            padding: 0 35px;
+            margin-top: 7px;
+        }
+        .feedback__line{
+            width: 65px;
+            padding: 8px;
+            border-top: 3px solid rgb(247, 89, 0);
+            margin: 20px auto;
+        }
+        .slide__feedback{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            .feedback__wrapper{ 
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+                overflow: hidden;
+                // width: 100%;
+                // max-width: 100%;
+                .feedback__card{
+                    // width: 100%;
+                    // overflow: hidden;
+                    // width: 304px;
+                    // max-width: 100%;
+                    height: 377px;
+                    border-radius: 10px;
+                    background-color: var(--white);
+
+                    .feedback__icon{
+                        width: 49px;
+                        height: 49px;
+                        border-radius: 50%;
+                        background: linear-gradient(180deg, rgba(247, 90, 0, 1.0), var(--oragne));
+                        text-align: center;
+                        padding: 14px 0;
+                        margin: 30px auto 20px;
+                        svg{
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    .feedback__content{
+                        width: 256px;
+                        height: 156px;
+                        font-size: 15px;
+                        text-align: center;
+                        line-height: 1.6;
+                        margin: 0 auto;
+                        padding: 0 10px;
+                    }
+                    .subline{
+                        width: 242px;
+                        border-top: 1px solid rgb(224, 224, 224);
+                        margin: 30px auto 20px;
+                    }
+                    .expert__info{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        .expert__image1{
+                            width: 61px;
+                            height: 57px;
+                            border-radius: 50%;
+                            background-size: cover;
+                            background-image: url("https://w.ladicdn.com/s400x400/5c7362c6c417ab07e5196b05/ke5sq-9_20210125044245.jpg");
+                        }
+                        .expert__image2{
+                            width: 61px;
+                            height: 57px;
+                            border-radius: 50%;
+                            background-size: cover;
+                            background-image: url("https://w.ladicdn.com/s400x400/5c7362c6c417ab07e5196b05/jeqzsavt20210125044334.jpg");
+                        }
+                        .expert__image3{
+                            width: 61px;
+                            height: 57px;
+                            border-radius: 50%;
+                            background-size: cover;
+                            background-image: url("https://w.ladicdn.com/s400x400/5c7362c6c417ab07e5196b05/uo2aipv220210125044318.jpg");
+                        }
+                        .expert__details{
+                            h5{
+                                color: rgb(33, 33, 33);
+                                font-size: 13px;
+                                font-weight: bold;
+                            }
+                            h6{
+                                color: rgb(227, 18, 11);
+                                font-size: 12px;
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+            }
+            .button{
+                font-size: 30px;
+                transition: all 0.3s linear;
+                z-index: 100;
+                cursor: pointer;
+            }
+            .button:active{
+                transform: scale(0.94) translateY(-50%);
             }
         }
     }

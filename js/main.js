@@ -198,3 +198,13 @@ $nextBtn.addEventListener('click', e=> {
   }
   slideCardStep();
 });
+
+// === #feedback === 
+// slide 
+
+let slides = document.querySelector('.feedback__wrapper');
+let sildeList = document.querySelectorAll('.feedback__card');
+let btnPre = document.querySelector('.pre-2');
+let btnNext = document.querySelector('.next-2');
+
+let slideNode = slideL
