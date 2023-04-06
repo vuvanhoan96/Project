@@ -168,7 +168,7 @@ nextBtn.addEventListener('click', e=> {
 
 // === #work ===
 // === slide ===
-let slide = document.querySelector('.slide__card');
+// let slide = document.querySelector('.slide__card');
 let cardBlock = document.querySelector('.card__block');
 let cards = document.querySelectorAll('.card__step');
 let $preBtn = document.querySelector('.pre-1');
@@ -203,8 +203,52 @@ $nextBtn.addEventListener('click', e=> {
 // slide 
 
 let slides = document.querySelector('.feedback__wrapper');
-let sildeList = document.querySelectorAll('.feedback__card');
+let slideList = document.querySelectorAll('.feedback__card');
 let btnPre = document.querySelector('.pre-2');
 let btnNext = document.querySelector('.next-2');
 
-let slideNode = slideL
+let indexCard = 0;
+
+let slideCardFeedback = () => {
+  indexCard = indexCard === slideList.length ? 0: indexCard<0 ? indexCard.length-1 : indexCard;
+  slides.style.transform = `translate(-${indexCard*100}%)`;
+};
+
+btnPre.addEventListener('click', e=> {
+  if(indexCard == 0){
+    indexCard = slides.length-1;
+  }else{
+    indexCard--;
+  }
+  slideCardFeedback();
+});
+btnNext.addEventListener('click', e=>{
+  if(indexCard == slides.length-1){
+    indexCard = 0;
+  }else{
+    indexCard++;
+  }
+  slideCardFeedback();
+});
+// let slideNode = slideList[0];
+// let slideWidth = slideNode[0].clientWidth;
+// let lastCard = slideNode.length - 1;
+// let card = 0;
+
+// btnPre.addEventListener('click', e =>{
+//   if(card<=0 && card > -(slideWidth * lastCard)){
+//     card-=slideWidth;
+//   }else{
+//     card = 0;
+//   }
+//   slideList.style = `transform: translate(${card}px, 0px)`;
+// });
+
+// btnNext.addEventListener('click', e =>{
+//   if(card < 0){
+//     card+=slideWidth;
+//   }else{
+//     card = slideWidth * lastCard * -1;
+//   }
+//   slideList.style = `transform: translate(${card}px, 0px)`;
+// });
