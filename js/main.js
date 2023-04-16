@@ -102,22 +102,45 @@ setInterval(countdown, 1000);
 
 // Đối tượng `Validator`
 function Validator(options){
+// Hàm thực hiện validate
+  function validate (inputElement, rule){
+    let errorElement = inputElement.parentElement.querySelector('.form__message');
+    let errorMessage = rule.test(inputElement.value);
+          
+          if(errorMessage){
+            errorElement.innerText = errorMessage;
+            inputElement.parentElement.classList.add('invalid');
+          }else{
+            errorElement.innerText = '';
+            inputElement.parentElement.classList.remove('invalid');
+          }
+  }
+  // Lấy element của form cần validate
   let formElement = document.querySelector(options.form);
-  
   if(formElement){
     options.rules.forEach(function(rule){
       let inputElement = formElement.querySelector(rule.selector);
-      console.log(inputElement);
-    })
+      
+
+      if(inputElement){
+        inputElement.onblur = function () {
+          validate(inputElement, rule);
+      
+        }
+      }
+    });
   }
 }
 
 // Định nghĩa rules
+// Nguyên tắc của các rules:
+// 1. Khi có lỗi => Trả ra message lỗi
+// 2. Khi hợp lệ => Không trả ra gì cả (undefined)
 Validator.isRequired = function(selector){
   return {
     selector: selector,
-    test: function(){
-
+    test: function(value){
+      return value.trim() ? undefined : 'Vui lòng nhập trường này';
     }
   };
 
@@ -126,8 +149,9 @@ Validator.isRequired = function(selector){
 Validator.isEmail = function(selector){
   return {
     selector: selector,
-    test: function(){
-
+    test: function(value){
+      let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return regex.test(value) ? undefined : 'Trường này phải là email';
     }
   };
 }
@@ -168,7 +192,6 @@ nextBtn.addEventListener('click', e=> {
 
 // === #work ===
 // === slide ===
-// let slide = document.querySelector('.slide__card');
 let cardBlock = document.querySelector('.card__block');
 let cards = document.querySelectorAll('.card__step');
 let $preBtn = document.querySelector('.pre-1');
@@ -178,7 +201,7 @@ let index = 0;
 
 let slideCardStep = () => {
   index = index === cards.length ? 0: index<0 ? index.length-1 : index;
-  cardBlock.style.transform = `translate(-${index * 100}%)`;
+  cardBlock.style.transform = `translate(-${index * 105}%)`;
 };
 
 $preBtn.addEventListener('click', e=> {
@@ -202,7 +225,7 @@ $nextBtn.addEventListener('click', e=> {
 // === #feedback === 
 // slide 
 
-let slides = document.querySelector('.feedback__wrapper');
+const slides = document.querySelector('.feedback__wrapper');
 let slideList = document.querySelectorAll('.feedback__card');
 let btnPre = document.querySelector('.pre-2');
 let btnNext = document.querySelector('.next-2');
@@ -210,12 +233,12 @@ let btnNext = document.querySelector('.next-2');
 let indexCard = 0;
 
 let slideCardFeedback = () => {
-  indexCard = indexCard === slideList.length ? 0: indexCard<0 ? indexCard.length-1 : indexCard;
-  slides.style.transform = `translate(-${indexCard*100}%)`;
+  indexCard = indexCard === slideList.length ? 0 : indexCard++;
+  slides.style.transform = `translate(calc(${indexCard} * (-100% - 15px)))`;
 };
 
 btnPre.addEventListener('click', e=> {
-  if(indexCard == 0){
+  if(indexCard === 0){
     indexCard = slides.length-1;
   }else{
     indexCard--;
@@ -230,25 +253,35 @@ btnNext.addEventListener('click', e=>{
   }
   slideCardFeedback();
 });
-// let slideNode = slideList[0];
-// let slideWidth = slideNode[0].clientWidth;
-// let lastCard = slideNode.length - 1;
-// let card = 0;
 
-// btnPre.addEventListener('click', e =>{
-//   if(card<=0 && card > -(slideWidth * lastCard)){
-//     card-=slideWidth;
-//   }else{
-//     card = 0;
-//   }
-//   slideList.style = `transform: translate(${card}px, 0px)`;
-// });
+// === #service === //
+// slide
 
-// btnNext.addEventListener('click', e =>{
-//   if(card < 0){
-//     card+=slideWidth;
-//   }else{
-//     card = slideWidth * lastCard * -1;
-//   }
-//   slideList.style = `transform: translate(${card}px, 0px)`;
-// });
+const slideService = document.querySelector('.services__wrapper');
+const  serviceList = document.querySelectorAll('.service');
+const  arrowPre    = document.querySelector('.pre-3');
+const  arrowNext   = document.querySelector('.next-3');
+
+let indexService = 0;
+
+let slideCardService = () => {
+  indexService = indexService === serviceList.length ? 0 : indexService++;
+  slideService.style.transform =`translate(calc(${indexService} * (-100% - 15px)))`;
+};
+
+arrowPre.addEventListener('click', e=>{
+  if(indexService === 0){
+    indexService = slideService.length - 1;
+  }else{
+    indexService--;
+  }
+  slideCardService();
+});
+arrowNext.addEventListener('click', e=>{
+  if(indexService === slideService.length-1){
+    indexService = 0;
+  }else{
+    indexService++;
+  }
+  slideCardService();
+});

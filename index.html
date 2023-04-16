@@ -25,7 +25,7 @@
                     <li class="navbar__link"><a href="#">About</a></li>
                     <li class="navbar__link"><a href="#">Sign</a></li>
                     <li class="navbar__link"><a href="#">Extension</a></li>
-                    <li class="navbar__link"><a href="#">Resume</a></li>
+                    <li class="navbar__link"><a href="#">Service</a></li>
                     <a href="#"><button class="navbar__btn">Contact</button></a>
                 </ul>
                 <!-- menu button -->
@@ -285,12 +285,15 @@
                     <div class="form__box" id="form">
                         <div class="form__wrapper">
                             <input type="text" placeholder="Your Name" id="name">
+                            <span class="form__message"></span>
                         </div>
                         <div class="form__wrapper">
                             <input type="email" placeholder="Email" id="email">
+                            <span class="form__message"></span>
                         </div>
                         <div class="form__wrapper">
                             <input type="tel" placeholder="Phone" id="phone">
+                            <span class="form__message"></span>
                         </div>
                         <button class="form__submit">SEND US</button>
                     </div>
@@ -345,6 +348,118 @@
             </div>
         </div>
     </section>
+    <!-- === #service === -->
+    <section id="service">
+        <div class="container">
+            <h2><span>Awesome</span> Services</h2>
+            <p>Our Expert Help You To Grow Your Business And Bookkeeping Problem.</p>
+            <div class="line"></div>
+            <div class="slide__service">
+                <div class="button pre-3"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="slide__service_view">
+                    <div class="services__wrapper">
+                        <div class="service">
+                            <div class="service__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M13,9H11V12H8V14H11V17H13V14H16V12H13M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22A9,9 0 0,0 21,13A9,9 0 0,0 12,4M22,5.72L17.4,1.86L16.11,3.39L20.71,7.25M7.88,3.39L6.6,1.86L2,5.71L3.29,7.24L7.88,3.39Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service__content">
+                                <h3>Dịch vụ Kế toán</h3>
+                                <p>Gửi cho chúng tôi biên lai của bạn và chúng tôi sẽ mã hóa các giao dịch của bạn.
+                                    Chúng tôi sẽ làm rõ mọi giao dịch không xác định với bạn và bạn sẽ nhận được một bộ
+                                    báo cáo tài chính chính xác sau cuối tháng.</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="service__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M12,2A3,3 0 0,0 9,5C9,6.27 9.8,7.4 11,7.83V10H8V12H11V18.92C9.16,18.63 7.53,17.57 6.53,16H8V14H3V19H5V17.3C6.58,19.61 9.2,21 12,21C14.8,21 17.42,19.61 19,17.31V19H21V14H16V16H17.46C16.46,17.56 14.83,18.63 13,18.92V12H16V10H13V7.82C14.2,7.4 15,6.27 15,5A3,3 0 0,0 12,2M12,4A1,1 0 0,1 13,5A1,1 0 0,1 12,6A1,1 0 0,1 11,5A1,1 0 0,1 12,4Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service__content">
+                                <h3>Nhân viên Kế toán</h3>
+                                <p>Với dịch vụ trả lương của chúng tôi, bạn có thể gửi cho chúng tôi dữ liệu bảng lương
+                                    của mình và chúng tôi sẽ đảm bảo nhân viên của bạn được trả lương chính xác thông
+                                    qua ký gửi trực tiếp bằng cuống phiếu lương và nhận T4 của họ sau cuối năm.</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="service__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M6.59,0.66C8.93,-1.15 11.47,1.06 12.04,4.5C12.47,4.5 12.89,4.62 13.27,4.84C13.79,4.24 14.25,3.42 14.07,2.5C13.65,0.35 16.06,-1.39 18.35,1.58C20.16,3.92 17.95,6.46 14.5,7.03C14.5,7.46 14.39,7.89 14.16,8.27C14.76,8.78 15.58,9.24 16.5,9.06C18.63,8.64 20.38,11.04 17.41,13.34C15.07,15.15 12.53,12.94 11.96,9.5C11.53,9.5 11.11,9.37 10.74,9.15C10.22,9.75 9.75,10.58 9.93,11.5C10.35,13.64 7.94,15.39 5.65,12.42C3.83,10.07 6.05,7.53 9.5,6.97C9.5,6.54 9.63,6.12 9.85,5.74C9.25,5.23 8.43,4.76 7.5,4.94C5.37,5.36 3.62,2.96 6.59,0.66M5,16H7A2,2 0 0,1 9,18V24H7V22H5V24H3V18A2,2 0 0,1 5,16M5,18V20H7V18H5M12.93,16H15L12.07,24H10L12.93,16M18,16H21V18H18V22H21V24H18A2,2 0 0,1 16,22V18A2,2 0 0,1 18,16Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service__content">
+                                <h3>Khoản phải trả</h3>
+                                <p>Với quy trình thanh toán được sắp xếp hợp lý, nhóm của chúng tôi sẽ đảm bảo các khoản
+                                    phải trả của bạn được ghi lại chính xác, được thanh toán theo sở thích của bạn và
+                                    được ghi trên phần mềm kế toán của bạn.</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="service__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service__content">
+                                <h3>Accounts Receivable</h3>
+                                <p>Gửi cho chúng tôi dữ liệu bán hàng của bạn và nhóm của chúng tôi sẽ đảm bảo hóa đơn
+                                    của bạn được gửi chính xác và đúng hạn, đồng thời theo dõi mọi hóa đơn chưa thanh
+                                    toán để cải thiện dòng tiền của bạn.</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="service__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M4.93,4.93C3.12,6.74 2,9.24 2,12C2,14.76 3.12,17.26 4.93,19.07L6.34,17.66C4.89,16.22 4,14.22 4,12C4,9.79 4.89,7.78 6.34,6.34L4.93,4.93M19.07,4.93L17.66,6.34C19.11,7.78 20,9.79 20,12C20,14.22 19.11,16.22 17.66,17.66L19.07,19.07C20.88,17.26 22,14.76 22,12C22,9.24 20.88,6.74 19.07,4.93M7.76,7.76C6.67,8.85 6,10.35 6,12C6,13.65 6.67,15.15 7.76,16.24L9.17,14.83C8.45,14.11 8,13.11 8,12C8,10.89 8.45,9.89 9.17,9.17L7.76,7.76M16.24,7.76L14.83,9.17C15.55,9.89 16,10.89 16,12C16,13.11 15.55,14.11 14.83,14.83L16.24,16.24C17.33,15.15 18,13.65 18,12C18,10.35 17.33,8.85 16.24,7.76M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service__content">
+                                <h3>Expert Advisor</h3>
+                                <p>We will schedule an introductory meeting with your bookkeeping team to ensure that we
+                                    kick off the relationship with a great workflow and industry-leading service.</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="service__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M12,13C9.33,13 4,14.33 4,17V20H20V17C20,14.33 14.67,13 12,13M12,4A4,4 0 0,0 8,8A4,4 0 0,0 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,14.9C14.97,14.9 18.1,16.36 18.1,17V18.1H5.9V17C5.9,16.36 9,14.9 12,14.9M12,5.9A2.1,2.1 0 0,1 14.1,8A2.1,2.1 0 0,1 12,10.1A2.1,2.1 0 0,1 9.9,8A2.1,2.1 0 0,1 12,5.9Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service__content">
+                                <h3>Saving Solution</h3>
+                                <p>Send Us Your Documents
+                                    Send us your invoices and receipts, either by snapping a photo with your phone, or
+                                    by forwarding documents via email. That is all we need from you—leave the rest up to
+                                    us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button next-3"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </section>
     <!-- === #work === -->
     <section id="work">
         <div class="container">
@@ -387,13 +502,6 @@
             </div>
         </div>
     </section>
-    <!-- === #price === -->
-    <section id="price">
-        <div class="container">
-
-        </div>
-
-    </section>
     <!-- === #feedback === -->
     <section id="feedback">
         <div class="container">
@@ -402,78 +510,83 @@
             <div class="feedback__line"></div>
             <div class="slide__feedback">
                 <div class="button pre-2"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="feedback__wrapper">
-                    <div class="feedback__card">
-                        <div class="feedback__icon">
-                            <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
-                                viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                                <path
-                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10M6,7H18V9H6V7M6,11H15V13H6V11Z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="feedback__content">
-                            "We were profitable the first month and I knew it because my accounts and books were clean
-                            and I could understand where the money was coming from and going to."
-                        </div>
-                        <div class="subline"></div>
-                        <div class="expert__info">
-                            <div class="expert__image1">
+                <div class="feedback__content_view">
+                    <div class="feedback__wrapper">
+                        <div class="feedback__card">
+                            <div class="feedback__icon">
+                                <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
+                                    viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10M6,7H18V9H6V7M6,11H15V13H6V11Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="feedback__content">
+                                "We were profitable the first month and I knew it because my accounts and books were
+                                clean
+                                and I could understand where the money was coming from and going to."
+                            </div>
+                            <div class="subline"></div>
+                            <div class="expert__info">
+                                <div class="expert__image1">
 
+                                </div>
+                                <div class="expert__details">
+                                    <h5>Jonathan</h5>
+                                    <h6>CEO, JTAM Engineering</h6>
+                                </div>
                             </div>
-                            <div class="expert__details">
-                                <h5>Jonathan</h5>
-                                <h6>CEO, JTAM Engineering</h6>
+                        </div>
+                        <div class="feedback__card">
+                            <div class="feedback__icon">
+                                <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
+                                    viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10M6,7H18V9H6V7M6,11H15V13H6V11Z">
+                                    </path>
+                                </svg>
                             </div>
-                        </div>
-                    </div>
-                    <div class="feedback__card">
-                        <div class="feedback__icon">
-                            <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
-                                viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                                <path
-                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10M6,7H18V9H6V7M6,11H15V13H6V11Z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="feedback__content">
-                            "Having a company that we know that's all you guys do, that's your expertise, that's your
-                            bread and butter. We know that it will be done properly. Forgetting any financial benefits,
-                            just the worry would be enough to justify it."
-                        </div>
-                        <div class="subline"></div>
-                        <div class="expert__info">
-                            <div class="expert__image2">
+                            <div class="feedback__content">
+                                "Having a company that we know that's all you guys do, that's your expertise, that's
+                                your
+                                bread and butter. We know that it will be done properly. Forgetting any financial
+                                benefits,
+                                just the worry would be enough to justify it."
+                            </div>
+                            <div class="subline"></div>
+                            <div class="expert__info">
+                                <div class="expert__image2">
 
+                                </div>
+                                <div class="expert__details">
+                                    <h5>Johny Nguyen</h5>
+                                    <h6>Accounts Manager, SafeKickg</h6>
+                                </div>
                             </div>
-                            <div class="expert__details">
-                                <h5>Johny Nguyen</h5>
-                                <h6>Accounts Manager, SafeKickg</h6>
+                        </div>
+                        <div class="feedback__card">
+                            <div class="feedback__icon">
+                                <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
+                                    viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10M6,7H18V9H6V7M6,11H15V13H6V11Z">
+                                    </path>
+                                </svg>
                             </div>
-                        </div>
-                    </div>
-                    <div class="feedback__card">
-                        <div class="feedback__icon">
-                            <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
-                                viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                                <path
-                                    d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9M10,16V19.08L13.08,16H20V4H4V16H10M6,7H18V9H6V7M6,11H15V13H6V11Z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="feedback__content">
-                            “It's extremely efficient and it's value-ridden for us because for the money that we pay
-                            GrowthForce and what we get, is just ... it far exceeds anything we could expect out of
-                            hiring a staff of people to do the same thing. ”
-                        </div>
-                        <div class="subline"></div>
-                        <div class="expert__info">
-                            <div class="expert__image3">
+                            <div class="feedback__content">
+                                “It's extremely efficient and it's value-ridden for us because for the money that we pay
+                                GrowthForce and what we get, is just ... it far exceeds anything we could expect out of
+                                hiring a staff of people to do the same thing. ”
+                            </div>
+                            <div class="subline"></div>
+                            <div class="expert__info">
+                                <div class="expert__image3">
 
-                            </div>
-                            <div class="expert__details">
-                                <h5>David Jone</h5>
-                                <h6>President, PlanNet Marketing</h6>
+                                </div>
+                                <div class="expert__details">
+                                    <h5>David Jone</h5>
+                                    <h6>President, PlanNet Marketing</h6>
+                                </div>
                             </div>
                         </div>
                     </div>

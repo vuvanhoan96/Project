@@ -24,7 +24,7 @@ body {
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: #6a696936;
+  background-color: rgba(215, 213, 213, 0.635);
 }
 img {
   max-width: 100%;
@@ -220,6 +220,9 @@ header .container .ladi-container .ladi-image {
     height: 682px;
     margin-bottom: 20px;
   }
+  header .container .navbar {
+    justify-content: space-evenly;
+  }
   header .container .navbar .navbar__links {
     position: initial;
     transform: translateX(0);
@@ -299,7 +302,7 @@ header .container .ladi-container .ladi-image {
 }
 #about {
   width: 420px;
-  margin-top: 20px;
+  margin: 10px auto;
 }
 #about .about__container {
   width: 420px;
@@ -674,7 +677,10 @@ header .container .ladi-container .ladi-image {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+}
+#sign .container .sign__2 .sign__form .form__box .form__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 #sign .container .sign__2 .sign__form .form__box .form__wrapper input {
   width: 287px;
@@ -684,6 +690,10 @@ header .container .ladi-container .ladi-image {
   padding: 0 11px;
   font-size: 16px;
   font-weight: bolder;
+}
+#sign .container .sign__2 .sign__form .form__box .form__wrapper .form__message {
+  width: 100%;
+  height: 20px;
 }
 #sign .container .sign__2 .sign__form .form__box button {
   width: 287px;
@@ -794,7 +804,7 @@ header .container .ladi-container .ladi-image {
   width: 306px;
   padding: 20px 25px 30px;
   margin: 0 auto;
-  background-color: #525252;
+  background-color: white;
   border-radius: 8px;
 }
 #extension .container .slide__container .card__container .card__wrapper .card__image {
@@ -832,7 +842,7 @@ header .container .ladi-container .ladi-image {
   #extension .container {
     width: 960px;
     height: 570px;
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.477);
     border-radius: 8px;
   }
   #extension .container .title__container {
@@ -860,6 +870,110 @@ header .container .ladi-container .ladi-image {
     background-color: var(--white);
   }
   #extension .container .slide__container .control {
+    display: none;
+  }
+}
+#service .container {
+  width: 420px;
+  margin: 40px auto;
+}
+#service .container h2 {
+  color: #f75a00;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#service .container h2 span {
+  color: #051f4d;
+}
+#service .container p {
+  color: #4d4d4d;
+  font-size: 19px;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+#service .container .line {
+  width: 65px;
+  border-top: 3px solid #f75900;
+  margin: 20px auto;
+}
+#service .container .slide__service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#service .container .slide__service .slide__service_view {
+  width: 100%;
+  overflow: hidden;
+}
+#service .container .slide__service .slide__service_view .services__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.4s ease;
+}
+#service .container .slide__service .slide__service_view .services__wrapper .service {
+  min-width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+#service .container .slide__service .slide__service_view .services__wrapper .service .service__icon {
+  width: 51px;
+  height: 51px;
+  border-radius: 4px;
+  background: linear-gradient(159deg, #f75900, var(--oragne));
+  text-align: center;
+}
+#service .container .slide__service .slide__service_view .services__wrapper .service .service__icon svg {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+}
+#service .container .slide__service .slide__service_view .services__wrapper .service .service__content {
+  width: 216px;
+}
+#service .container .slide__service .slide__service_view .services__wrapper .service .service__content h3 {
+  color: #073a91;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+#service .container .slide__service .slide__service_view .services__wrapper .service .service__content p {
+  color: #3d3d3d;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.6;
+}
+#service .container .slide__service .button {
+  font-size: 30px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: pointer;
+}
+#service .container .slide__service .button:active {
+  transform: scale(0.94) translateY(-50%);
+}
+@media (min-width: 992px) {
+  #service {
+    width: 100%;
+  }
+  #service .container {
+    width: 960px;
+    height: 700px;
+  }
+  #service .container .slide__service .slide__service_view {
+    overflow: initial;
+  }
+  #service .container .slide__service .slide__service_view .services__wrapper {
+    width: 304px;
+  }
+  #service .container .slide__service .button {
     display: none;
   }
 }
@@ -972,7 +1086,7 @@ header .container .ladi-container .ladi-image {
     width: 960px;
     height: 450px;
     margin: 0 auto;
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.477);
     border-radius: 10px;
   }
   #work .container h3 {
@@ -1159,20 +1273,24 @@ header .container .ladi-container .ladi-image {
   justify-content: space-between;
   align-items: center;
 }
-#feedback .container .slide__feedback .feedback__wrapper {
+#feedback .container .slide__feedback .feedback__content_view {
+  width: 100%;
+  overflow: hidden;
+}
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  overflow: hidden;
+  transition: all 0.4s ease;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card {
   min-width: 100%;
   height: 377px;
   border-radius: 10px;
   background-color: var(--white);
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .feedback__icon {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .feedback__icon {
   width: 49px;
   height: 49px;
   border-radius: 50%;
@@ -1181,11 +1299,11 @@ header .container .ladi-container .ladi-image {
   padding: 14px 0;
   margin: 30px auto 20px;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .feedback__icon svg {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .feedback__icon svg {
   width: 24px;
   height: 24px;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .feedback__content {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .feedback__content {
   width: 256px;
   height: 156px;
   font-size: 15px;
@@ -1194,44 +1312,44 @@ header .container .ladi-container .ladi-image {
   margin: 0 auto;
   padding: 0 10px;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .subline {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .subline {
   width: 242px;
   border-top: 1px solid #e0e0e0;
   margin: 30px auto 20px;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .expert__info {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .expert__info {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .expert__info .expert__image1 {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .expert__info .expert__image1 {
   width: 61px;
   height: 57px;
   border-radius: 50%;
   background-size: cover;
   background-image: url("https://w.ladicdn.com/s400x400/5c7362c6c417ab07e5196b05/ke5sq-9_20210125044245.jpg");
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .expert__info .expert__image2 {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .expert__info .expert__image2 {
   width: 61px;
   height: 57px;
   border-radius: 50%;
   background-size: cover;
   background-image: url("https://w.ladicdn.com/s400x400/5c7362c6c417ab07e5196b05/jeqzsavt20210125044334.jpg");
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .expert__info .expert__image3 {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .expert__info .expert__image3 {
   width: 61px;
   height: 57px;
   border-radius: 50%;
   background-size: cover;
   background-image: url("https://w.ladicdn.com/s400x400/5c7362c6c417ab07e5196b05/uo2aipv220210125044318.jpg");
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .expert__info .expert__details h5 {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .expert__info .expert__details h5 {
   color: #212121;
   font-size: 13px;
   font-weight: bold;
 }
-#feedback .container .slide__feedback .feedback__wrapper .feedback__card .expert__info .expert__details h6 {
+#feedback .container .slide__feedback .feedback__content_view .feedback__wrapper .feedback__card .expert__info .expert__details h6 {
   color: #e3120b;
   font-size: 12px;
   font-style: italic;
@@ -1244,4 +1362,22 @@ header .container .ladi-container .ladi-image {
 }
 #feedback .container .slide__feedback .button:active {
   transform: scale(0.94) translateY(-50%);
+}
+@media (min-width: 992px) {
+  #feedback {
+    width: 100%;
+  }
+  #feedback .container {
+    width: 960px;
+    padding: 40px 0 50px;
+  }
+  #feedback .container .slide__feedback .feedback__content_view {
+    overflow: initial;
+  }
+  #feedback .container .slide__feedback .feedback__content_view .feedback__wrapper {
+    width: 304px;
+  }
+  #feedback .container .slide__feedback .button {
+    display: none;
+  }
 }
