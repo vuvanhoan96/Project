@@ -29,22 +29,6 @@ function Validator(options){
       // Lấy element của form cần validate
       let formElement = document.querySelector(options.form);
       if(formElement){
-
-        // let btn = document.querySelector('.form__submit');
-        // btn.onsubmit = function () {
-        //   options.rules.forEach(function (rule) {
-        //     let inputElement = formElement.querySelector(rule.selector);
-        //     validate(inputElement, rule);
-        //   })
-        // }
-        formElement.onsubmit = function(e) {
-          
-          // Lặp qua từng rules và validate
-          options.rules.forEach(function (rule) {
-            let inputElement = formElement.querySelector(rule.selector);
-            validate(inputElement, rule);
-          });
-        }
         // Lặp qua mỗi rule và xử lý ( lắng nghe sự kiện blur, input, ...)
         options.rules.forEach(function(rule){
 
