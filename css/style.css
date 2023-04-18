@@ -36,6 +36,20 @@ img {
   margin: 0 auto;
   padding: 0 10px;
 }
+/* === overlay ===*/
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  display: none;
+}
+#overlay.show {
+  display: initial;
+}
 header {
   width: 100%;
 }
@@ -516,7 +530,17 @@ header .container .ladi-container .ladi-image {
   padding: 25px 0;
 }
 #sign .container .sign__1 .sign__box .sign__up {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#sign .container .sign__1 .sign__box .sign__up .input__form {
+  display: flex;
+  flex-direction: column;
+}
+#sign .container .sign__1 .sign__box .sign__up .input__form .form__message {
+  height: 10px;
+  color: red;
 }
 #sign .container .sign__1 .sign__box .sign__up input {
   width: 180px;
@@ -694,6 +718,7 @@ header .container .ladi-container .ladi-image {
 #sign .container .sign__2 .sign__form .form__box .form__wrapper .form__message {
   width: 100%;
   height: 20px;
+  color: red;
 }
 #sign .container .sign__2 .sign__form .form__box button {
   width: 287px;
@@ -971,7 +996,11 @@ header .container .ladi-container .ladi-image {
     overflow: initial;
   }
   #service .container .slide__service .slide__service_view .services__wrapper {
-    width: 304px;
+    flex-wrap: wrap;
+  }
+  #service .container .slide__service .slide__service_view .services__wrapper .service {
+    min-width: 0;
+    flex: 0 0 calc(33.3% - 10px);
   }
   #service .container .slide__service .button {
     display: none;

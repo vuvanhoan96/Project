@@ -15,18 +15,20 @@
 </head>
 
 <body>
+    <!-- === overlay === -->
+    <section id="overlay"></section>
     <!-- === header === -->
     <header>
         <div class="container">
             <div class="navbar">
                 <!-- links -->
                 <ul class="navbar__links">
-                    <li class="navbar__link"><a href="#">Work</a></li>
-                    <li class="navbar__link"><a href="#">About</a></li>
-                    <li class="navbar__link"><a href="#">Sign</a></li>
-                    <li class="navbar__link"><a href="#">Extension</a></li>
-                    <li class="navbar__link"><a href="#">Service</a></li>
-                    <a href="#"><button class="navbar__btn">Contact</button></a>
+                    <li class="navbar__link"><a href="#work">Work</a></li>
+                    <li class="navbar__link"><a href="#about">About</a></li>
+                    <li class="navbar__link"><a href="#sign">Sign</a></li>
+                    <li class="navbar__link"><a href="#extension">Extension</a></li>
+                    <li class="navbar__link"><a href="#service">Service</a></li>
+                    <a href="#contact"><button class="navbar__btn">Contact</button></a>
                 </ul>
                 <!-- menu button -->
                 <div class="navbar__icons">
@@ -219,7 +221,10 @@
                 <div class="sign__box">
                     <h5>Get latest news from us</h5>
                     <div class="sign__up">
-                        <input type="email" placeholder="Email">
+                        <div class="input__form" id="form-1">
+                            <input type="text" placeholder="Email" id="email-1">
+                            <span class="form__message"></span>
+                        </div>
                         <button>SIGN UP NOW</button>
                     </div>
                     <p>Get 100 business tips every month, free forever.</p>
@@ -860,17 +865,7 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/689637e638.js" crossorigin="anonymous"></script>
     <!-- main js -->
-    <script src="./js/main.js"></script>
-
-    <script>
-        Validator({
-            form: '#form',
-            rules: [
-                Validator.isRequired('#name'),
-                Validator.isEmail('#email'),
-            ]
-        });
-    </script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>
